@@ -1,12 +1,20 @@
+import { redirigirLMS } from "../../services/redirect";
+
+
 const Home = () => {
 
   const handleClick = async () => {
-    await new Promise(resolve => setTimeout(resolve, 100));
-  
-    const popup = window.open('https://example.com', '_blank');
-    if (!popup) {
-      alert('Safari bloqueó el popup');
-    }
+    const res = await redirigirLMS();
+    const checkPopUpClosed = setInterval(async () => {
+      if (res && res?.closed) {
+        clearInterval(checkPopUpClosed);
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+        if (response.status === 200) {
+          window.location.reload();
+        }
+        window.location.reload();
+      }
+    }, 3 * 1000)
   };
 
   return ( 
