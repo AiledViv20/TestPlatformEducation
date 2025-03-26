@@ -18,8 +18,8 @@ const Home = () => {
   };
 
   return ( 
-    <div style={{ padding: '2rem' }}>
-      <h1>Home Test</h1>
+    <div>
+      <h1>Home Redirect Safari</h1>
       <button onClick={handleClick} style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}>
         Empezar
       </button>
