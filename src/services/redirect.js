@@ -2,7 +2,7 @@ let POPUP_LMS
 
 export const redirigirLMS = async () => {
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    //await new Promise(resolve => setTimeout(resolve, 1000));
 
     let urlLMS = "https://www.example.com/";
 

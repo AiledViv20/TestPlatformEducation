@@ -1,6 +1,8 @@
+import { redirigirLMS } from "../../services/redirect";
+
 const Home = () => {
 
-  /* const handleClick = async () => {
+  const handleClick = async () => {
     const res = await redirigirLMS();
     const checkPopUpClosed = setInterval(async () => {
       if (res && res?.closed) {
@@ -12,9 +14,9 @@ const Home = () => {
         window.location.reload();
       }
     }, 3 * 1000)
-  }; */
+  };
 
-  const handleClick = async () => {
+ /*  const handleClick = async () => {
     const res1 = await fetch('https://jsonplaceholder.typicode.com/posts/1');
     const data1 = await res1.json();
 
@@ -36,11 +38,11 @@ const Home = () => {
         }
       }
     }, 3000);
-  };
+  }; */
 
   return ( 
     <div>
-      <h1>Home Redirect Safari Test v1</h1>
+      <h1>Home Redirect Safari Test v2</h1>
       <button onClick={handleClick} style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}>
         Empezar
       </button>
